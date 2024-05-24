@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+p {
+  position: absolute;
+  font-size: 15px;
+  bottom: 25px;
+  color: #000;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.loader-container .svg {
+  width: 150px;
+  heigh: 300px;
+  position: relative;
+}
+
+.loader-container img {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  width: 35px;
+  height: 50px;
+}
+
+.all-lines {
+  position: absolute;
+  width: 100%;
+  top: 46%;
+  left: 25%;
+}
+
+.small-line-outline {
+  width: 30%;
+  height: 6px;
+  border-radius: 10px;
+  border: 1px solid #fd4b9d;
+}
+
+.line-outline {
+  width: 50%;
+  height: 6px;
+  border-radius: 10px;
+  border: 1px solid #fd4b9d;
+  margin-top: 6px;
+}
+
+.line {
+  width: 0;
+  height: 100%;
+  background-color: #fd4b9d;
+  animation: grow 1s forwards 0.5s infinite;
+}
+
+.line {
+  width: 0;
+  animation: grow 1s forwards;
+}
+
+.line-outline:nth-child(2) .line {
+  animation-delay: 1s;
+}
+
+.line-outline:nth-child(3) .line {
+  animation-delay: 1.5s;
+}
+
+.line-outline:nth-child(4) .line {
+  animation-delay: 2s;
+}
+
+.line-outline:nth-child(5) .line {
+  animation-delay: 2.5s;
+}
+
+@keyframes grow {
+  to {
+    width: 100%;
+  }
+}
